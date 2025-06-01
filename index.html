@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grohs City Trips</title>
   <style>
+    .section-content {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    @keyframes bg-zoom {
+      0% {
+        background-size: 100%;
+      }
+      100% {
+        background-size: 110%;
+      }
+    }
     :root {
       --primary: #007b80;
       --secondary: #00a3a6;
@@ -15,13 +29,26 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--light);
+      background: url('map-texture.jpg') center center / cover no-repeat fixed;
       color: var(--dark);
       line-height: 1.6;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.6);
+      z-index: -1;
     }
 
     header {
-      background: linear-gradient(rgba(0, 123, 128, 0.6), rgba(0, 123, 128, 0.6)), url('stadt.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(0, 123, 128, 0.6), rgba(0, 123, 128, 0.6)), url('stadt.jpg') center center / cover no-repeat;
+      position: relative;
       color: white;
       display: flex;
       align-items: center;
@@ -30,6 +57,7 @@
       gap: 2rem;
       text-align: left;
       padding: 4rem 1rem 2rem;
+      animation: bg-zoom 20s ease-in-out infinite alternate;
     }
 
     header img {
@@ -37,12 +65,16 @@
       height: auto;
       margin-bottom: 1rem;
       flex-shrink: 0;
+      position: relative;
+      z-index: 2;
     }
     .header-content {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
+      position: relative;
+      z-index: 2;
     }
 
     header h1 {
@@ -80,9 +112,9 @@
       text-align: center;
     }
 
-    section:nth-child(even) {
+    /* section:nth-child(even) {
       background-color: #ffffff;
-    }
+    } */
 
     section h2 {
       color: var(--primary);
@@ -137,9 +169,6 @@
     <div class="header-content">
       <h1>Grohs City Trips</h1>
       <p>Unvergessliche Stadterlebnisse – stilvoll, persönlich und unvergesslich</p>
-      <div style="margin-top: 2rem;">
-        <a href="#about" style="background-color: white; color: #007b80; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: background-color 0.3s;">Jetzt Tour entdecken</a>
-      </div>
     </div>
   </header>
 
@@ -150,64 +179,67 @@
   </nav>
 
   <section id="about">
-    <h2>Entdecke deine Lieblingsstadt neu</h2>
-    <p>
-      Ob du zum ersten Mal hier bist oder deine Heimatstadt neu erleben willst –
-      Grohs City Trips bietet dir geführte Touren voller Geschichte,
-      Anekdoten und versteckter Juwelen.
-    </p>
-    <div class="cards">
-      <div class="card" data-aos="fade-up">
-        <h3><i class="fas fa-landmark"></i> Historische Tour</h3>
-        <p>Ein Streifzug durch vergangene Jahrhunderte mit spannenden Fakten und Geschichten.</p>
-      </div>
-      <div class="card" data-aos="fade-up">
-        <h3><i class="fas fa-map-marker-alt"></i> Geheime Ecken</h3>
-        <p>Entdecke unbekannte Orte abseits der Touristenpfade mit unseren lokalen Guides.</p>
-      </div>
-      <div class="card" data-aos="fade-up">
-        <h3><i class="fas fa-camera-retro"></i> Fotospots & Genuss</h3>
-        <p>Die besten Kulissen für dein Instagram und kulinarische Empfehlungen inklusive.</p>
+    <div class="section-content">
+      <h2>Entdecke deine Lieblingsstadt neu</h2>
+      <p>
+        Ob du zum ersten Mal hier bist oder deine Heimatstadt neu erleben willst –
+        Grohs City Trips bietet dir geführte Touren voller Geschichte,
+        Anekdoten und versteckter Juwelen.
+      </p>
+      <div class="cards">
+        <div class="card" data-aos="fade-up">
+          <h3><i class="fas fa-landmark"></i> Historische Tour</h3>
+          <p>Ein Streifzug durch vergangene Jahrhunderte mit spannenden Fakten und Geschichten.</p>
+        </div>
+        <div class="card" data-aos="fade-up">
+          <h3><i class="fas fa-map-marker-alt"></i> Geheime Ecken</h3>
+          <p>Entdecke unbekannte Orte abseits der Touristenpfade mit unseren lokalen Guides.</p>
+        </div>
+        <div class="card" data-aos="fade-up">
+          <h3><i class="fas fa-camera-retro"></i> Fotospots & Genuss</h3>
+          <p>Die besten Kulissen für dein Instagram und kulinarische Empfehlungen inklusive.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="why">
-    <h2>Warum mit uns reisen?</h2>
-    <p>
-      Elegant, authentisch, persönlich – unsere Guides lieben ihre Städte und
-      erzählen mit Begeisterung. Für Freunde, Familien oder Einzelpersonen.
-    </p>
-    <div class="cards">
-      <div class="card" data-aos="fade-up">
-        <h3><i class="fas fa-user-friends"></i> Persönlich</h3>
-        <p>Individuelle Touren angepasst an eure Interessen und Wünsche.</p>
-      </div>
-      <div class="card" data-aos="fade-up">
-        <h3><i class="fas fa-graduation-cap"></i> Erfahren</h3>
-        <p>Unsere Guides sind zertifiziert, mehrsprachig und voller Leidenschaft.</p>
-      </div>
-      <div class="card" data-aos="fade-up">
-        <h3><i class="fas fa-star"></i> Stilvoll</h3>
-        <p>Hochwertige Touren mit stilvollem Auftreten und erstklassigem Service.</p>
+    <div class="section-content">
+      <h2>Warum mit uns reisen?</h2>
+      <p>
+        Elegant, authentisch, persönlich – unsere Guides lieben ihre Städte und
+        erzählen mit Begeisterung. Für Freunde, Familien oder Einzelpersonen.
+      </p>
+      <div class="cards">
+        <div class="card" data-aos="fade-up">
+          <h3><i class="fas fa-user-friends"></i> Persönlich</h3>
+          <p>Individuelle Touren angepasst an eure Interessen und Wünsche.</p>
+        </div>
+        <div class="card" data-aos="fade-up">
+          <h3><i class="fas fa-graduation-cap"></i> Erfahren</h3>
+          <p>Unsere Guides sind freundlich, mehrsprachig und voller Leidenschaft.</p>
+        </div>
+        <div class="card" data-aos="fade-up">
+          <h3><i class="fas fa-star"></i> Stilvoll</h3>
+          <p>Hochwertige Touren mit stilvollem Auftreten und erstklassigem Service.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Kontakt & Buchung</h2>
-    <p>
-      Schreibe uns an <a href="mailto:info@grohs-citytrips.de">info@grohs-citytrips.de</a><br />
-      oder folge uns auf Instagram:<br />
-      <a href="https://instagram.com/grohs.citytrips" target="_blank">@grohs.citytrips</a>
-    </p>
+    <div class="section-content">
+      <h2>Kontakt & Buchung</h2>
+      <p>
+        Schreibe uns an <a href="mailto:bernhard@grohs.org">bernhard@grohs.org</a><br />
+      </p>
+    </div>
   </section>
 
   <footer>
     <img src="logo.png" width="60" alt="Grohs Logo"/><br />
     &copy; 2025 Grohs City Trips<br />
-    <a href="mailto:info@grohs-citytrips.de">info@grohs-citytrips.de</a><br />
-    <a href="https://instagram.com/grohs.citytrips" target="_blank">@grohs.citytrips</a>
+    <a href="mailto:bernhard@grohs.org">bernhard@grohs.org</a><br />
   </footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
