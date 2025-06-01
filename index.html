@@ -21,7 +21,7 @@
     }
 
     header {
-      background-color: var(--primary);
+      background: linear-gradient(rgba(0, 123, 128, 0.6), rgba(0, 123, 128, 0.6)), url('stadt.jpg') center/cover no-repeat;
       color: white;
       display: flex;
       align-items: center;
@@ -128,6 +128,8 @@
       text-decoration: underline;
     }
   </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -155,16 +157,16 @@
       Anekdoten und versteckter Juwelen.
     </p>
     <div class="cards">
-      <div class="card">
-        <h3>Historische Tour</h3>
+      <div class="card" data-aos="fade-up">
+        <h3><i class="fas fa-landmark"></i> Historische Tour</h3>
         <p>Ein Streifzug durch vergangene Jahrhunderte mit spannenden Fakten und Geschichten.</p>
       </div>
-      <div class="card">
-        <h3>Geheime Ecken</h3>
+      <div class="card" data-aos="fade-up">
+        <h3><i class="fas fa-map-marker-alt"></i> Geheime Ecken</h3>
         <p>Entdecke unbekannte Orte abseits der Touristenpfade mit unseren lokalen Guides.</p>
       </div>
-      <div class="card">
-        <h3>Fotospots & Genuss</h3>
+      <div class="card" data-aos="fade-up">
+        <h3><i class="fas fa-camera-retro"></i> Fotospots & Genuss</h3>
         <p>Die besten Kulissen für dein Instagram und kulinarische Empfehlungen inklusive.</p>
       </div>
     </div>
@@ -177,16 +179,16 @@
       erzählen mit Begeisterung. Für Freunde, Familien oder Einzelpersonen.
     </p>
     <div class="cards">
-      <div class="card">
-        <h3>Persönlich</h3>
+      <div class="card" data-aos="fade-up">
+        <h3><i class="fas fa-user-friends"></i> Persönlich</h3>
         <p>Individuelle Touren angepasst an eure Interessen und Wünsche.</p>
       </div>
-      <div class="card">
-        <h3>Erfahren</h3>
+      <div class="card" data-aos="fade-up">
+        <h3><i class="fas fa-graduation-cap"></i> Erfahren</h3>
         <p>Unsere Guides sind zertifiziert, mehrsprachig und voller Leidenschaft.</p>
       </div>
-      <div class="card">
-        <h3>Stilvoll</h3>
+      <div class="card" data-aos="fade-up">
+        <h3><i class="fas fa-star"></i> Stilvoll</h3>
         <p>Hochwertige Touren mit stilvollem Auftreten und erstklassigem Service.</p>
       </div>
     </div>
@@ -202,7 +204,14 @@
   </section>
 
   <footer>
-    &copy; 2025 Grohs City Trips. Alle Rechte vorbehalten.
+    <img src="logo.png" width="60" alt="Grohs Logo"/><br />
+    &copy; 2025 Grohs City Trips<br />
+    <a href="mailto:info@grohs-citytrips.de">info@grohs-citytrips.de</a><br />
+    <a href="https://instagram.com/grohs.citytrips" target="_blank">@grohs.citytrips</a>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
