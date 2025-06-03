@@ -59,6 +59,38 @@
     a {
       color: #007b80;
     }
+    .home-button {
+      display: inline-block;
+      margin-top: 3rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #007b80;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .home-button:hover {
+      background-color: #005f66;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+      .gutschein {
+        padding: 1.5rem;
+      }
+      .gutschein h1 {
+        font-size: 1.5rem;
+      }
+      .gutschein h2 {
+        font-size: 1.1rem;
+      }
+      .code {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -90,6 +122,7 @@
       📧 Kontakt für Rückfragen & Terminabsprache: <br />
       <a href="mailto:bernhard@grohs.org">bernhard@grohs.org</a>
     </div>
+    <a href="index.html" class="home-button">Zurück zur Startseite</a>
   </div>
 </body>
 </html>
