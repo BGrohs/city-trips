@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -6,80 +7,101 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: url('map-texture.jpg') center center / cover no-repeat fixed;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f0f0f0, #e6f7f8), url('map-texture.jpg') center/cover no-repeat fixed;
       color: #222;
-      padding: 3rem;
+      padding: 2rem;
     }
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(255, 255, 255, 0.6);
-      z-index: -1;
-    }
+
     .gutschein {
       max-width: 800px;
       margin: auto;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
       padding: 3rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       text-align: center;
+      animation: fadeIn 0.8s ease-out;
     }
-    .gutschein h1 {
-      color: #007b80;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
       font-size: 2.5rem;
+      color: #007b80;
+      margin-bottom: 0.5rem;
     }
-    .gutschein h2 {
-      margin-top: 2rem;
+
+    .subheading {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
       color: #444;
     }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      color: #333;
+    }
+
     ul {
       list-style: none;
       padding: 0;
     }
+
     ul li {
       margin: 0.5rem 0;
+      font-size: 1rem;
     }
+
     .icon {
       color: #00a3a6;
       margin-right: 0.5rem;
     }
+
     .code {
       font-size: 1.2rem;
-      background: #eee;
+      background: #e0f7f9;
+      border: 2px dashed #00a3a6;
       display: inline-block;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
+      padding: 0.7rem 1.5rem;
+      border-radius: 12px;
       margin-top: 1rem;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
+
     .footer {
-      margin-top: 3rem;
+      margin-top: 2rem;
       font-style: italic;
       color: #666;
     }
+
     .kontakt {
       margin-top: 2rem;
+      font-size: 0.95rem;
     }
+
     a {
       color: #007b80;
     }
+
     .home-button {
       display: inline-block;
       margin-top: 3rem;
-      padding: 0.75rem 1.5rem;
+      padding: 0.75rem 2rem;
       background-color: #007b80;
       color: white;
       text-decoration: none;
-      border-radius: 30px;
+      border-radius: 40px;
       font-weight: bold;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s ease;
     }
+
     .home-button:hover {
       background-color: #005f66;
     }
@@ -88,16 +110,26 @@
       body {
         padding: 1rem;
       }
+
       .gutschein {
         padding: 1.5rem;
       }
-      .gutschein h1 {
-        font-size: 1.5rem;
+
+      h1 {
+        font-size: 1.8rem;
       }
-      .gutschein h2 {
-        font-size: 1.1rem;
+
+      h2 {
+        font-size: 1.2rem;
       }
+
       .code {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+      }
+
+      .home-button {
+        width: 100%;
         font-size: 1rem;
       }
     }
@@ -105,33 +137,36 @@
 </head>
 <body>
   <div class="gutschein">
-    <h1>🎁 Gutschein für die Harry Potter Studio Tour in London</h1>
-    <p><strong>Beschenkt wird:</strong><h2> 🧙🏻‍♀️ <em>Sophie Steinkress</h2></em></p>
-    <p><strong>Anlass:</strong> ✨ <em>🥳 Geburtstag 🎊</em></p>
+    <h1>🎁✨ Magischer Gutschein für die Harry Potter Studio Tour 🧙🏻‍♀️🪄</h1>
 
-    <h2><i class="fas fa-ticket-alt icon"></i> Was dich erwartet</h2>
-    <p>Ein unvergesslicher Besuch in den Warner Bros. Studios in London. Du erkundest Originalkulissen aus den Harry Potter Filmen – von der Großen Halle bis zur Winkelgasse.</p>
+<div class="subheading">
+  Für 🧙🏻‍♀️ <strong>Sophie Steinkress</strong> ✨<br>
+  Zum 🎉 <strong>🥳 Geburtstag 🎊</strong> ✨
+</div>
 
-    <h2><i class="fas fa-gift icon"></i> Gutschein enthält:</h2>
-    <ul>
-      <li>🎫 Eintritt zur Studio Tour</li>
-      <li>🚌 Optional: Hin- und Rücktransfer ab London</li>
-      <li>🍺 Butterbier-Erlebnis</li>
-      <li>📸 Fotos & Erinnerungen</li>
-    </ul>
+<h2><i class="fas fa-ticket-alt icon"></i> 🪄 Was dich erwartet</h2>
+<p>Ein 🧙🏻‍♀️ zauberhafter Besuch in den Warner Bros. Studios in London. Du erkundest Originalkulissen aus den Harry Potter Filmen – von der Großen Halle bis zur Winkelgasse. 🏰✨</p>
 
-    <h2><i class="fas fa-magic icon"></i> Dein persönlicher Code:</h2>
-    <div class="code">MAGIC2025-LDN2</div>
-    <p>Gültig bis: <em>31.12.2025</em></p>
+<h2><i class="fas fa-gift icon"></i> 🎁 Dein Erlebnis-Paket</h2>
+<ul>
+  <li>🧾 Eintritt zur Studio Tour</li>
+  <li>🚌 Magischer Transfer ab London</li>
+  <li>🍺 Butterbier-Verkostung</li>
+  <li>📸 Erinnerungsfotos zwischen Zaubertränken & Besen</li>
+</ul>
 
-    <div class="footer">
-      „Möge dein Weg nach Hogwarts voller Wunder sein – und dein Tag magisch wie nie zuvor.“
-    </div>
+<h2><i class="fas fa-magic icon"></i> 🧙‍♂️ Dein Zaubercode</h2>
+<div class="code">✨ MAGIC2025-LDN2 ✨</div>
+<p>Gültig bis: <em>31.12.2025 🗓️</em></p>
 
+<div class="footer">
+  🪄 „Möge dein Weg nach Hogwarts voller Wunder sein – und dein Tag magisch wie nie zuvor.“ ✨
+</div>
     <div class="kontakt">
-      📧 Kontakt für Rückfragen & Terminabsprache: <br />
+      📧 Rückfragen & Buchung: <br />
       <a href="mailto:bernhard@grohs.org">bernhard@grohs.org</a>
     </div>
+
     <a href="index.html" class="home-button">Zurück zur Startseite</a>
   </div>
 </body>
