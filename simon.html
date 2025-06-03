@@ -13,6 +13,16 @@
       color: #222;
       padding: 3rem;
     }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.6);
+      z-index: -1;
+    }
     .gutschein {
       max-width: 800px;
       margin: auto;
