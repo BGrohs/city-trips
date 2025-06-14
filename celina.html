@@ -22,13 +22,12 @@
       padding: 3rem;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       text-align: center;
+      animation: fadeIn 0.8s ease-out;
     }
 
-    .gutschein img.character-poster {
-      max-width: 100%;
-      border-radius: 12px;
-      margin: 2rem 0;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
@@ -38,7 +37,7 @@
     }
 
     .subheading {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-bottom: 2rem;
       color: #444;
     }
@@ -94,13 +93,12 @@
     .home-button {
       display: inline-block;
       margin-top: 3rem;
-      padding: 0.6rem 1.2rem;
+      padding: 0.75rem 2rem;
       background-color: #007b80;
       color: white;
       text-decoration: none;
       border-radius: 40px;
       font-weight: bold;
-      font-size: 1rem;
       transition: background-color 0.3s ease;
     }
 
@@ -131,48 +129,47 @@
       }
 
       .home-button {
-        width: auto;
-        font-size: 0.95rem;
-        padding: 0.6rem 1rem;
+        width: 100%;
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="gutschein">
-    <h1>🎁✨ Magischer Gutschein für die Harry Potter Studio Tour 🧙‍♂️🪄</h1>
-    <div class="subheading">
-      Für 🧙‍♂️ <strong>Simon Steinkress</strong> ✨<br>
-      Zum 🎉 <strong>🥳 Geburtstag 🎊</strong> ✨
-    </div>
+    <h1>🎁✨ Magischer Gutschein für die Harry Potter Studio Tour 🧙🏻‍♀️🪄</h1>
 
-    <img src="character-poster-simon.png" alt="Charakterposter Simon Steinkress" class="character-poster" />
+<div class="subheading">
+  Für 🧙🏻‍♀️ <strong>Celina</strong> ✨<br>
+  Zum 🎉 <strong>🥳 Geburtstag 🎊</strong> ✨
+</div>
 
-    <h2><i class="fas fa-ticket-alt icon"></i> 🪄 Was dich erwartet</h2>
-    <p>Ein 🧙‍♀️ zauberhafter Besuch in den Warner Bros. Studios in London. Du erkundest Originalkulissen aus den Harry Potter Filmen – von der Großen Halle bis zur Winkelgasse. 🏰✨</p>
+ <img src="character-poster-celina.png" alt="Charakterposter Celina" class="character-poster" />
 
-    <h2><i class="fas fa-gift icon"></i> 🎁 Dein Erlebnis-Paket</h2>
-    <ul>
-      <li>🧾 Eintritt zur Studio Tour</li>
-      <li>🚌 Magischer Transfer ab London</li>
-      <li>🍺 Butterbier-Verkostung in Hogsmeade</li>
-      <li>📸 Erinnerungsfotos zwischen Zaubertränken & Besen</li>
-    </ul>
+<h2><i class="fas fa-ticket-alt icon"></i> 🪄 Was dich erwartet</h2>
+<p>Ein 🧙🏻‍♀️ zauberhafter Besuch in den Warner Bros. Studios in London. Du erkundest Originalkulissen aus den Harry Potter Filmen – von der Großen Halle bis zur Winkelgasse. 🏰✨</p>
 
-    <h2><i class="fas fa-magic icon"></i> 🧙‍♂️ Dein Zaubercode</h2>
-    <div class="code">✨ MAGIC2025-LDN1 ✨</div>
-    <p>Gültig bis: <em>31.12.2025 🗓️</em></p>
+<h2><i class="fas fa-gift icon"></i> 🎁 Dein Erlebnis-Paket</h2>
+<ul>
+  <li>🧾 Eintritt zur Studio Tour</li>
+  <li>🚌 Magischer Transfer ab London</li>
+  <li>🍺 Butterbier-Verkostung</li>
+  <li>📸 Erinnerungsfotos zwischen Zaubertränken & Besen</li>
+</ul>
 
-    <div class="footer">
-      🪄 „Möge dein Weg nach Hogwarts voller Wunder sein – und dein Tag magisch wie nie zuvor.“ ✨
-    </div>
+<h2><i class="fas fa-magic icon"></i> 🧙‍♂️ Dein Zaubercode</h2>
+<div class="code">✨ MAGIC2025-LDN2 ✨</div>
+<p>Gültig bis: <em>31.12.2025 🗓️</em></p>
 
+<div class="footer">
+  🪄 „Möge dein Weg nach Hogwarts voller Wunder sein – und dein Tag magisch wie nie zuvor.“ ✨
+</div>
     <div class="kontakt">
       📧 Rückfragen & Buchung: <br />
       <a href="mailto:bernhard@grohs.org">bernhard@grohs.org</a>
     </div>
 
-    <a href="index.html" class="home-button">🔙 Zurück zur Startseite</a>
+    <a href="index.html" class="home-button">Zurück zur Startseite</a>
   </div>
 </body>
 </html>
